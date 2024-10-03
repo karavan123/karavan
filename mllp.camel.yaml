@@ -1,0 +1,14 @@
+- route:
+    id: route-7594
+    nodePrefixId: route-c83
+    from:
+      id: from-47a1
+      uri: mllp
+      parameters:
+        hostname: 0.0.0.0
+        port: "7081"
+        validatePayload: true
+      steps:
+        - process:
+            id: process-0ba1
+            ref: myProcessor
