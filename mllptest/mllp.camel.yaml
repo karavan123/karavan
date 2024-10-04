@@ -1,0 +1,14 @@
+- route:
+    id: route-328c
+    nodePrefixId: route-264
+    from:
+      id: from-f6f9
+      uri: mllp
+      parameters:
+        hostname: 0.0.0.0
+        port: "7080"
+        validatePayload: true
+      steps:
+        - process:
+            id: process-df54
+            ref: myProcessor

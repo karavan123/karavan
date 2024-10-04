@@ -1,0 +1,10 @@
+services:
+  mllptest:
+    image: mllptest
+    restart: always
+    ports:
+      - "8081:8080"
+      - "7080:7080"
+      
+    networks:
+      - karavan
