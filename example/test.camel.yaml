@@ -1,0 +1,37 @@
+- rest:
+    id: rest-f670
+    post:
+      - id: post-0dc1
+        path: /test
+        to: direct:test
+- route:
+    id: route-4edd
+    nodePrefixId: route-3a4
+    from:
+      id: from-5295
+      uri: direct
+      parameters:
+        name: test
+      steps:
+        - unmarshal:
+            id: unmarshal-52be
+            json:
+              id: json-6a3f
+        - log:
+            id: log-b7ee
+            message: ${body}
+        - to:
+            id: to-5a47
+            uri: kamelet:mongodb-sink
+            parameters:
+              hosts: host.docker.internal:27017
+              collection: prova
+              database: prova
+              username: admin
+              password: password
+              sslValidationEnabled: false
+              ssl: false
+              createCollection: true
+        - log:
+            id: log-6acb
+            message: ${body}
