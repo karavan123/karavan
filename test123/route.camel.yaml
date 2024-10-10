@@ -6,7 +6,7 @@
       uri: mllp
       parameters:
         hostname: 0.0.0.0
-        port: "7000"
+        port: "7081"
       steps:
         - log:
             id: log-f623
@@ -15,5 +15,5 @@
             id: to-9f25
             uri: mllp
             parameters:
-              port: "7000"
-              hostname: 127.0.0.1
+              port: "8000"
+              hostname: 10.8.0.173
