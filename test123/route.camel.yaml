@@ -1,0 +1,19 @@
+- route:
+    id: route-b026
+    nodePrefixId: route-f41
+    from:
+      id: from-a53c
+      uri: mllp
+      parameters:
+        hostname: 0.0.0.0
+        port: "7000"
+      steps:
+        - log:
+            id: log-f623
+            message: ${body}
+        - to:
+            id: to-9f25
+            uri: mllp
+            parameters:
+              port: "7000"
+              hostname: 127.0.0.1
