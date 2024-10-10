@@ -11,9 +11,9 @@
         - log:
             id: log-f623
             message: ${body}
-        - to:
-            id: to-9f25
-            uri: mllp
-            parameters:
-              port: "8000"
-              hostname: 10.8.0.173
+        - setBody:
+            id: setBody-562d
+            expression:
+              constant:
+                id: constant-e52f
+                expression: ok
