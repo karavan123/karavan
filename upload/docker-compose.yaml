@@ -1,0 +1,8 @@
+services:
+  upload:
+    image: upload
+    restart: always
+    ports:
+      - "6080:8080"
+    networks:
+      - karavan

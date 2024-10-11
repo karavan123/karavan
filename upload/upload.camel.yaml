@@ -1,0 +1,29 @@
+- rest:
+    id: rest-ce43
+    put:
+      - id: put-7609
+        path: upload
+        to: direct:upload
+- route:
+    id: upload
+    from:
+      id: from-e73e
+      uri: direct
+      parameters:
+        name: upload
+      steps:
+        - unmarshal:
+            id: unmarshal-9f29
+            json:
+              id: json-d4dc
+        - to:
+            id: to-81ae
+            uri: kamelet:log-action
+            parameters:
+              multiline: true
+        - setBody:
+            id: setBody-4061
+            expression:
+              constant:
+                id: constant-a730
+                expression: ok
