@@ -16,14 +16,22 @@
             id: unmarshal-9f29
             json:
               id: json-d4dc
-        - to:
-            id: to-81ae
-            uri: kamelet:log-action
-            parameters:
-              multiline: true
+        - split:
+            id: split-99e2
+            expression:
+              simple:
+                id: simple-765a
+                expression: ${body}
+            steps:
+              - to:
+                  id: to-8f74
+                  uri: kamelet:log-action
+                  parameters:
+                    multiline: true
+                    level: TRACE
         - setBody:
-            id: setBody-4061
+            id: setBody-2bc9
             expression:
               constant:
-                id: constant-a730
+                id: constant-fb43
                 expression: ok
