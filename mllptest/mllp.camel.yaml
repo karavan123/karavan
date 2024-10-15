@@ -12,3 +12,9 @@
         - process:
             id: process-df54
             ref: myProcessor
+        - to:
+            id: to-5fbb
+            uri: mllp
+            parameters:
+              hostname: 172.16.14.191
+              port: "7082"
